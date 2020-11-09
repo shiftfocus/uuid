@@ -2,7 +2,7 @@ name := "uuid"
 
 organization := "ca.shiftfocus"
 
-version := "1.0.2"
+version := "2.0.0"
 
 scalaVersion := "2.12.12"
 
