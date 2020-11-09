@@ -4,7 +4,7 @@ organization := "ca.shiftfocus"
 
 version := "1.0.2"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.12.12"
 
 crossScalaVersions := Seq("2.10.4", "2.11.6")
 
@@ -27,5 +27,5 @@ publishTo := {
 resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.4.0"
+  "com.typesafe.play" %% "play-json" % "2.9.1"
 )
