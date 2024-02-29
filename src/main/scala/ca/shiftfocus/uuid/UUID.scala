@@ -5,9 +5,7 @@ import play.api.libs.json._
 import play.api.libs.json.Writes._
 import play.api.libs.functional.syntax._
 
-case class UUID (
-  uuid: java.util.UUID
-) {
+case class UUID (uuid: java.util.UUID) {
   def bytes: Array[Byte] = UUID.uuidToBytes(uuid)
   def string: String = uuid.toString()
   def cleanString: String = {
