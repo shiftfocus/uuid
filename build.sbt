@@ -16,12 +16,12 @@ publishTo := {
   val privateKeyFile = new java.io.File(sys.env("HOME") + "/.ssh/id_rsa")
   Some(Resolver.sftp(
     "ShiftFocus Maven Repository",
-    "maven.shiftfocus.ca",
-    50022,
+    "maven.private.shiftfocus.ca",
+    22,
     "/var/www/maven.shiftfocus.ca/repositories/" + {
       if (isSnapshot.value) "snapshots" else "releases"
     }
-  ) as ("maven", privateKeyFile))
+  ) as ("gitlab-runner", privateKeyFile))
 }
 
 resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/"
