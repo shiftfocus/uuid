@@ -2,11 +2,11 @@ name := "uuid"
 
 organization := "ca.shiftfocus"
 
-version := "2.0.0"
+version := "3.0.0"
 
-scalaVersion := "2.12.18"
+scalaVersion := "2.13.14"
 
-crossScalaVersions := Seq("2.10.4", "2.11.6")
+crossScalaVersions := Seq("2.11.6", "2.12.19")
 
 val root = project in file(".")
 

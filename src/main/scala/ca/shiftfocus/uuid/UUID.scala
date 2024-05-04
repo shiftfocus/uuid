@@ -28,14 +28,14 @@ case class UUID (
 
 object UUID {
 
-  implicit val uuidReads = new Reads[UUID] {
+  implicit val uuidReads : Reads[UUID] = new Reads[UUID] {
     def reads(json: JsValue) = json match {
       case JsString(s) => JsSuccess(UUID(s))
       case _ => JsError("String value expected.")
     }
   }
 
-  implicit val uuidWrites = new Writes[UUID] {
+  implicit val uuidWrites : Writes[UUID] = new Writes[UUID] {
     def writes(uuid: UUID): JsValue = {
       JsString(uuid.string)
     }
